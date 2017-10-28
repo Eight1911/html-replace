@@ -8,13 +8,13 @@ For example
     let html = `
     <div class="yourself">
       <p class="child"> 
-        Take kindly the counsel of the years,
-        gracefully surrendering the things of youth.
-        Nurture strength of spirit to shield you in sudden misfortune.
-        But do not distress yourself with dark imaginings.
-        Many fears are born of fatigue and loneliness.
-        Beyond a wholesome discipline,
-        be gentle with yourself. 
+        Take kindly the counsel of the years,<br>
+        gracefully surrendering the things of youth. <br>
+        Nurture strength of spirit to shield you in sudden misfortune.<br>
+        But do not distress yourself with dark imaginings. <br>
+        Many fears are born of fatigue and loneliness. <br>
+        Beyond a wholesome discipline, <br>
+        be gentle with yourself. <br>
       </p>
       <p class="child"> 
         <i>You</i> are a child of the universe, <br>
