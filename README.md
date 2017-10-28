@@ -52,7 +52,7 @@ The match is actually a regex match. So, it's possible to do something like this
 ```js
     let matches = searcher.search("\Ws", "i")
     // this is equivalent to
-    let regex = new RegExp(/(\Ws)/i)
+    let regex = new RegExp("(\Ws)", "i")
     let matches = searcher.search(regex)
 ```
 In fact, all string searches are converted into regexes before being used. Finally, to replace a string, first do a search, then feed the match object into the replace function. This replaces the second occurence of the word "yourself".
