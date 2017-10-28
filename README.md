@@ -1,7 +1,7 @@
 # HTML Search and Replace
 
 This is a script for searching and replacing texts in html files 
-while preserving element specifications. There is no internal parser, so its a bit rough on the edges. But it's tiny and has no dependencies. Implemeted using a heap to map between indices of the extracted text and indices of the same text in the html string.
+while preserving element specifications. There is no internal parser, so it's a bit rough on the edges. But it's tiny and has no dependencies. Implemeted using a heap to map between indices of the extracted text and indices of the same text in the html string.
 
 For example
 ```js
