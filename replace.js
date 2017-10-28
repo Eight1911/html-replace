@@ -12,13 +12,13 @@ let HtmlSearch = (() => {
 
   function onespace(s) {
     while (s.includes("  "))
-      s = s.replace("  ", " ")
+      s = s.replace(/  /g, " ")
 
     while (s.includes("\n "))
-      s = s.replace("\n ", "\n")
+      s = s.replace(/\n /g, "\n")
 
     while (s.includes(" \n"))
-      s = s.replace(" \n", "\n")
+      s = s.replace(/ \n/g, "\n")
 
     return s
   }
@@ -166,4 +166,3 @@ let HtmlSearch = (() => {
   return Html
 
 })()
-
