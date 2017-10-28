@@ -60,7 +60,8 @@ In fact, all string searches are converted into regexes before being used. Final
     let matches = searcher.search("\Ws", "i")
     searcher.replace(matches[1], "others")
     // searcher.text() >>> Take kindly the counsel of the years, gracefully
-    // surrendering the things of youth. Nurture strength of spirit to shield // you in sudden misfortune. But do not distress yourself with dark 
+    // surrendering the things of youth. Nurture strength of spirit to shield
+    // you in sudden misfortune. But do not distress yourself with dark 
     // imaginings. Many fears are born of fatigue and loneliness. Beyond a 
     // wholesome discipline, be gentle with others. You are a child of the 
     // universe, no less than the trees and the stars; you have a right to be 
