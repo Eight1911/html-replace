@@ -33,7 +33,10 @@ Extract text from html:
     // extract text from html
     let text = searcher.text()
 
-    // this gives `be gentle with yourself. You are a child of the universe, no less than the trees and the stars; you have a right to be here. And whether or not it is clear to you, no doubt the universe is unfolding as it should.`
+    // this gives `be gentle with yourself. You are a child of the universe, 
+    // no less than the trees and the stars; you have a right to be here. And 
+    // whether or not it is clear to you, no doubt the universe is unfolding 
+    // as it should.`
 ```
 
 Search for things in the text.
@@ -56,11 +59,23 @@ In fact, all string searches are converted into regexes before being used. Final
 ```js
     let matches = searcher.search("\Ws", "i")
     searcher.replace(matches[1], "others")
-    // searcher.text() >>> Take kindly the counsel of the years, gracefully surrendering the things of youth. Nurture strength of spirit to shield you in sudden misfortune. But do not distress yourself with dark imaginings. Many fears are born of fatigue and loneliness. Beyond a wholesome discipline, be gentle with *others*. You are a child of the universe, no less than the trees and the stars; you have a right to be here. And whether or not it is clear to you, no doubt the universe is unfolding as it should. 
+    // searcher.text() >>> Take kindly the counsel of the years, gracefully
+    // surrendering the things of youth. Nurture strength of spirit to shield // you in sudden misfortune. But do not distress yourself with dark 
+    // imaginings. Many fears are born of fatigue and loneliness. Beyond a 
+    // wholesome discipline, be gentle with others. You are a child of the 
+    // universe, no less than the trees and the stars; you have a right to be 
+    // here. And whether or not it is clear to you, no doubt the universe is 
+    // unfolding as it should. 
 ```
 Since each replace might off set the search index. We also offer a way to efficiently replace all matches at once. To selectively replace something, just filter the match list.
 ```js
     let matches = searcher.search("\Ws", "i")
-    searcher.replaceall(matches[0], "others")
-    // searcher.text() >>> Take kindly the counsel of the years, gracefully surrendering the things of youth. Nurture strength of spirit to shield you in sudden misfortune. But do not distress *others* with dark imaginings. Many fears are born of fatigue and loneliness. Beyond a wholesome discipline, be gentle with *others*. You are a child of the universe, no less than the trees and the stars; you have a right to be here. And whether or not it is clear to you, no doubt the universe is unfolding as it should. 
+    searcher.replaceall(matches, "others")
+    // searcher.text() >>> Take kindly the counsel of the years, gracefully 
+    // surrendering the things of youth. Nurture strength of spirit to shield // you in sudden misfortune. But do not distress others with dark 
+    // imaginings. Many fears are born of fatigue and loneliness. Beyond a 
+    // wholesome discipline, be gentle with others. You are a child of the 
+    // universe, no less than the trees and the stars; you have a right to be 
+    // here. And whether or not it is clear to you, no doubt the universe is 
+    // unfolding as it should. 
 ```
