@@ -26,7 +26,7 @@ For example
     </div>`
 ```
 
-Extract text from html:
+Extract text from html.
 ```js
     let searcher = new HtmlSearch(html)
 
