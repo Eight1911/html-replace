@@ -168,32 +168,3 @@ let HtmlSearch = (() => {
 
 })()
 
-
-let html = `
-<div class="poetry">
-  <p class="child"> 
-    Take kindly the counsel of the years,<br>
-    gracefully surrendering the things of youth.<br>
-    Nurture strength of spirit to shield you in sudden misfortune.<br>
-    But do not distress yourself with dark imaginings.<br>
-    Many fears are born of fatigue and loneliness.<br>
-    Beyond a wholesome discipline, <br>
-    be gentle with yourself.<br>
-  </p>
-  <p class="child"> 
-    <i>You</i> are a child of the universe, <br>
-    no less than the trees and the stars; <br>
-    you have a right to be here. <br>
-    And whether or not it is clear to you, <br>
-    no doubt the universe is unfolding as it should. <br>
-  </p>
-</div>`
-
-let searcher = new HtmlSearch(html)
-let matches = searcher.search("yourself", "i")
-console.log(searcher.text())
-console.log(matches)
-// searcher.replaceall(matches, "others")
-searcher.replaceall(matches, "others")
-console.log(searcher.text())
-console.log(searcher.html())
