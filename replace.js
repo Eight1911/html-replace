@@ -72,13 +72,13 @@ let HtmlSearch = (() => {
     }
 
     constructor(html) {
-      const match = /(<.*?>)/g
+      const match = /(<..*?>)/g
       this.raw = html
       this.items = html
         .split(match)
         .map(s => s.trim())
         .filter(s => s !== '')
-        .map(s => ({ "attr": /^<.*?>$/g.test(s), "text":s }))
+        .map(s => ({ "attr": /^<..*?>$/g.test(s), "text":s }))
       this.items.forEach(d => d.attr ? null : d.text = onespace(d.text+" "))
       this.heapify()
     }
@@ -88,6 +88,7 @@ let HtmlSearch = (() => {
         .filter(s => !s.attr)
         .map(s => s.text)
         .join("")
+        .trim()
     }
 
     html() {
@@ -166,3 +167,8 @@ let HtmlSearch = (() => {
   return Html
 
 })()
+
+
+module.exports = {
+  HtmlSearch: HtmlSearch
+}
