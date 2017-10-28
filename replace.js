@@ -151,7 +151,6 @@ let HtmlSearch = (() => {
       affected.forEach(i => this.update(i))
     }
 
-
     replaceall(ms, newstr) {
       ms.sort((ma, mb) => mb.s - ma.s)
       for (let i = 0; i < ms.length - 1; ++i) 
