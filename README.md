@@ -6,7 +6,7 @@ while preserving element specifications. There is no internal parser, so its a b
 For example
 ```js
     let html = `
-    <div class="right">
+    <div class="yourself">
       <p class="child"> 
         Take kindly the counsel of the years,
         gracefully surrendering the things of youth.
@@ -39,7 +39,7 @@ Extract text from html.
     // as it should.`
 ```
 
-Search for things in the text.
+Search for things in the text. Note that the class of div (yourself) does not match the search, which is want we want.
 ```js
     // find yourself lol
     let matches = searcher.search("yourself")
