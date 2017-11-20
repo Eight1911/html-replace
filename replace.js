@@ -145,14 +145,12 @@ const Search = module.exports = (() => {
 
 
     replace(match, newstr) {
-
       function split(text, ...pairs) {
         pairs.unshift(0)
         const mapper = (_, i) =>
           text.slice(pairs[i], pairs[i+1])
         return pairs.map(mapper)
       }
-
 
       function finalize(self, match, tochange, affected) {
         const removedtext = tochange
@@ -209,3 +207,4 @@ const Search = module.exports = (() => {
   return Html
 
 })()
+
